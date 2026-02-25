@@ -30,6 +30,7 @@ concept Range {
 concept TypeIdentifier {
   o String name
   o String namespace optional
+  o String resolvedName optional
 }
 
 abstract concept DecoratorLiteral {
@@ -243,6 +244,7 @@ concept Models {
 }
 
 abstract concept ScalarDeclaration extends Declaration {
+  o String namespace optional
 }
 
 concept BooleanScalar extends ScalarDeclaration {
